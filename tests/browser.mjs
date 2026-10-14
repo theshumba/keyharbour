@@ -60,6 +60,10 @@ try {
       if (id === 'phrase') assert.ok((await page.locator('#emergency-workspace').innerText()).includes('sweeper'));
       if (id === 'approval') assert.ok((await page.locator('#emergency-workspace').innerText()).includes('Disconnecting'));
     }
+    for (const id of ['constructor', '__proto__', 'unknown']) {
+      await page.goto(`${base}app.html#emergency/${id}`);
+      await page.getByRole('heading', { name: 'What happened?' }).waitFor();
+    }
   });
   await page.goto(`${base}app.html#links`);
   async function check(value) { await page.locator('#website').fill(value); await page.getByRole('button', { name: 'Check link', exact: true }).click(); await page.locator('#link-result:not([hidden])').waitFor(); }

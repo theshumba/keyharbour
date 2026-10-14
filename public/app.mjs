@@ -247,7 +247,7 @@ const incidents = {
 };
 function renderEmergency(id, moveFocus = false) {
   const area = $('#emergency-workspace'); area.replaceChildren();
-  const incident = incidents[id];
+  const incident = Object.hasOwn(incidents, id) ? incidents[id] : null;
   if (!incident) {
     const note = node('div', undefined, 'notice warn'); note.append(node('strong', 'Never give anyone your recovery phrase.'), node('p', 'We do not offer recovery, a safe-wallet transfer or staffed incident response.')); area.append(note);
     const heading = node('h2', 'What happened?'); const choices = node('div', undefined, 'emergency-choices');
