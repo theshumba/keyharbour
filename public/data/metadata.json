@@ -1,0 +1,9 @@
+{
+  "source": "https://github.com/MetaMask/eth-phishing-detect",
+  "revision": "00c9983f4c126ebe8514cba68e8a50b21b1b24b4",
+  "fetchedAt": "2026-10-14T00:37:36.143Z",
+  "upstreamUpdatedAt": "2026-10-14T00:33:36Z",
+  "sha256": "92514b058e75ca95248b67589e104aa08984aea53e9ca83caf092905e0bb6266",
+  "count": 106829,
+  "pathCount": 484
+}

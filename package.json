@@ -1,0 +1,13 @@
+{
+  "name": "keyharbour",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "devDependencies": { "playwright": "1.62.1" },
+  "scripts": {
+    "test": "node --test tests/safety.test.mjs",
+    "test:browser": "node tests/browser.mjs",
+    "update:list": "node scripts/update-list.mjs",
+    "start": "python3 -m http.server 8874 --directory public"
+  }
+}
