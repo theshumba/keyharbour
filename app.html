@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your safety desk | KeyHarbour</title><meta name="description" content="Make your wallet safety plan, check suspicious links and find the right emergency steps. No wallet connection or secrets required.">
+  <meta name="theme-color" content="#163553"><meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self' https://raw.githubusercontent.com https://api.github.com; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"><script type="module" src="app.mjs"></script>
+</head><body class="app-body">
+<a class="skip" href="#main">Skip to content</a>
+<header class="app-header"><a class="brand" href="./"><svg viewBox="0 0 48 56" fill="none" aria-hidden="true"><path d="M24 3 44 11v16c0 12-8 20-20 26C12 47 4 39 4 27V11Z" stroke="currentColor" stroke-width="2.5"/><path d="m14 28 7 7 14-16" stroke="currentColor" stroke-width="2.5"/></svg>KeyHarbour</a><a href="privacy.html">Privacy &amp; limits</a></header>
+<div class="app-layout">
+  <aside class="app-sidebar"><nav aria-label="Safety tools">
+    <button class="tab active" data-view="check"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m12 2 8 3v7c0 5-4 8-8 10-4-2-8-5-8-10V5Z" stroke="currentColor" stroke-width="1.6"/><path d="m8 12 3 3 5-6" stroke="currentColor" stroke-width="1.6"/></svg>My safety plan</button>
+    <button class="tab" data-view="links"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m10 14 4-4m-6 5-2 2a4 4 0 0 0 6 6l4-4a4 4 0 0 0 0-6M8 11a4 4 0 0 1 0-6l4-4a4 4 0 0 1 6 6l-2 2" transform="translate(0 0) scale(.9)" stroke="currentColor" stroke-width="1.7"/></svg>Check a link</button>
+    <button class="tab" data-view="emergency"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m12 3 10 18H2L12 3Z" stroke="currentColor" stroke-width="1.6"/><path d="M12 9v5m0 3v1" stroke="currentColor" stroke-width="1.8"/></svg>Emergency help</button>
+  </nav><div class="sidebar-note"><strong>Your keys stay yours.</strong>No wallet connection.<br>No phrases or signatures.<br>Just practical safety checks.</div></aside>
+  <main id="main" class="app-main">
+    <section id="check-view" aria-labelledby="check-heading"><h1 id="check-heading">Your wallet safety plan.</h1><p class="lead">Know the gaps. Start with the most important one.</p><div id="assessment-workspace" class="workspace"></div><div class="storage-settings" id="storage-settings" hidden><label class="consent"><input type="checkbox" id="save-answers">Keep my checklist in this browser. Use this only on a device you trust.</label><button class="text-button" id="reset-check">Clear my checklist</button></div><p id="storage-status" class="status-message" role="status"></p></section>
+    <section id="links-view" aria-labelledby="links-heading" hidden><h1 id="links-heading">Look twice before you click.</h1><p class="lead">Check the address without opening the website.</p><div class="workspace">
+      <form id="link-form" novalidate><label class="field-label" for="website">Website address</label><div class="input-row"><input id="website" name="website" type="text" inputmode="url" autocomplete="off" autocapitalize="none" spellcheck="false" maxlength="2048" placeholder="e.g. ledger.com" aria-describedby="link-note link-error"><button class="button" id="check-link" type="submit">Check link</button></div><p class="form-note" id="link-note">Enter a link only. Never paste recovery words, keys or PINs. Your link is not saved or sent to the website.</p><p class="field-error" id="link-error" role="alert" hidden></p></form>
+      <div id="link-result" class="link-result" aria-live="polite" hidden></div>
+      <div class="source-box"><p id="list-status" role="status">The phishing list loads when you check a link.</p><p>Source: <a href="https://github.com/MetaMask/eth-phishing-detect" target="_blank" rel="noopener noreferrer">MetaMask’s public phishing list</a>. Domains and reported page paths only; no page or transaction scan.</p><button class="text-button" id="refresh-list">Refresh threat list</button></div>
+    </div><div class="official-sites"><p>Open a known official website yourself.</p><div><a href="https://www.ledger.com/" target="_blank" rel="noopener noreferrer">Ledger</a><a href="https://trezor.io/" target="_blank" rel="noopener noreferrer">Trezor</a><a href="https://metamask.io/" target="_blank" rel="noopener noreferrer">MetaMask</a><a href="https://revoke.cash/" target="_blank" rel="noopener noreferrer">Revoke.cash</a></div></div></section>
+    <section id="emergency-view" aria-labelledby="emergency-heading" hidden><h1 id="emergency-heading">Pause. Find the right first step.</h1><p class="lead">Different problems need different responses.</p><div class="workspace" id="emergency-workspace"></div></section>
+    <p class="app-footnote">KeyHarbour is independent of Ledger and MetaMask. These tools do not hold funds, inspect your device or guarantee safety. <a href="privacy.html">Privacy and limitations</a></p>
+    <noscript><div class="notice warn">The interactive tools need JavaScript. Never enter recovery words here. Read <a href="https://www.ledger.com/phishing-campaigns-status">Ledger’s phishing guidance</a> if you have received a suspicious request.</div></noscript>
+  </main>
+</div></body></html>
